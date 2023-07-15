@@ -1,0 +1,33 @@
+//[kenv-core](../../index.md)/[com.mooncloak.kodetools.kenv.store](index.md)/[getFloat](get-float.md)
+
+# getFloat
+
+[common]\
+fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getFloat](get-float.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)
+
+Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-float.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) as an [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) number and returns the result.
+
+#### Return
+
+The [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) value corresponding to the environment variable in this [EnvironmentVariableStore](-environment-variable-store/index.md) identified by the provided [key](get-float.md).
+
+#### Parameters
+
+common
+
+| | |
+|---|---|
+| key | The name of the environment variable whose value is being retrieved. |
+
+#### See also
+
+| |
+|---|
+| [toFloat](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/index.html) |
+
+#### Throws
+
+| | |
+|---|---|
+| [NoSuchEnvironmentVariableException](../com.mooncloak.kodetools.kenv.exception/-no-such-environment-variable-exception/index.md) | if there is no environment variable in this [EnvironmentVariableStore](-environment-variable-store/index.md) with the provided [key](get-float.md). |
+| [NumberFormatException](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number-format-exception/index.html) | if the string is not a valid representation of a number. |

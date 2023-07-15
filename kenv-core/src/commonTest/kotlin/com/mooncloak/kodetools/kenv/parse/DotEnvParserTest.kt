@@ -718,4 +718,58 @@ class DotEnvParserTest {
 
         assertEquals(expected = expectedResult, actual = result)
     }
+
+    @Test
+    fun blank_separating_lines_are_ignored() {
+        val parser = DotEnvParser(
+            options = DotEnvParser.Options(
+                includeEmptyValues = true
+            )
+        )
+
+        val string = """
+                |export keyOne=valueOne
+                |
+                |keyTwo = valueTwo
+                |
+                | keyThree= "valueThree"
+                | 
+                |  keyFour ='valueFour'
+                |  
+                |keyFive
+                |
+                |    keySix
+                |    
+                |# comment
+            """.trimMargin()
+        val expectedResult = listOf(
+            EnvironmentVariable(
+                key = "keyOne",
+                stringValue = "valueOne"
+            ),
+            EnvironmentVariable(
+                key = "keyTwo",
+                stringValue = "valueTwo"
+            ),
+            EnvironmentVariable(
+                key = "keyThree",
+                stringValue = "valueThree"
+            ),
+            EnvironmentVariable(
+                key = "keyFour",
+                stringValue = "valueFour"
+            ),
+            EnvironmentVariable(
+                key = "keyFive",
+                stringValue = ""
+            ),
+            EnvironmentVariable(
+                key = "keySix",
+                stringValue = ""
+            )
+        )
+        val result = parser.parse(string)
+
+        assertEquals(expected = expectedResult, actual = result)
+    }
 }

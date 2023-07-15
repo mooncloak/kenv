@@ -1,0 +1,6 @@
+//[kenv-core](../../../../index.md)/[com.mooncloak.kodetools.kenv](../../index.md)/[EnvironmentVariable](../index.md)/[Value](index.md)/[Value](-value.md)
+
+# Value
+
+[common]\
+constructor(value: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html))
