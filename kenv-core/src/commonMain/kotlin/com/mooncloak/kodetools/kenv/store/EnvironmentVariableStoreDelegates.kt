@@ -7,6 +7,17 @@ import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
 /**
+ * Retrieves a property delegate representing an [EnvironmentVariable.Value], converted to an [String], retrieved from
+ * this [EnvironmentVariableStore] using the provided [key] (or the name of the delegated variable if the [key] is
+ * `null`), or if there is no matching [EnvironmentVariable.Value] for the [key] then the `defaultValue` is used.
+ */
+fun EnvironmentVariableStore.boolean(
+    key: String? = null,
+    defaultValue: String
+): ReadOnlyProperty<Any?, String> =
+    StringDelegate(store = this, key = key, defaultValue = defaultValue)
+
+/**
  * Retrieves a property delegate representing an [EnvironmentVariable.Value], converted to an [Boolean], retrieved from
  * this [EnvironmentVariableStore] using the provided [key] (or the name of the delegated variable if the [key] is
  * `null`), or if there is no matching [EnvironmentVariable.Value] for the [key] then the `defaultValue` is used.
@@ -96,6 +107,16 @@ fun EnvironmentVariableStore.uint(key: String? = null, defaultValue: UInt = 0u):
  */
 fun EnvironmentVariableStore.ulong(key: String? = null, defaultValue: ULong = 0u): ReadOnlyProperty<Any?, ULong> =
     ULongDelegate(store = this, key = key, defaultValue = defaultValue)
+
+/**
+ * Retrieves a property delegate representing an [EnvironmentVariable.Value], converted to an [String], retrieved from
+ * this [EnvironmentVariableStore] using the provided [key] (or the name of the delegated variable if the [key] is
+ * `null`), or if there is no matching [EnvironmentVariable.Value] for the [key] then `null` is returned.
+ */
+fun EnvironmentVariableStore.stringOrNull(
+    key: String? = null
+): ReadOnlyProperty<Any?, String?> =
+    NullableStringDelegate(store = this, key = key)
 
 /**
  * Retrieves a property delegate representing an [EnvironmentVariable.Value], converted to an [Boolean], retrieved from
@@ -200,6 +221,15 @@ private abstract class OptionalKeyDelegate<T>(
     override fun getValue(thisRef: Any?, property: KProperty<*>): T = getValue(key ?: property.name)
 }
 
+private class StringDelegate(
+    private val store: EnvironmentVariableStore,
+    key: String?,
+    private val defaultValue: String
+) : OptionalKeyDelegate<String>(key) {
+
+    override fun getValue(key: String): String = store.getStringOrDefault(key = key, defaultValue = defaultValue)
+}
+
 private class BooleanDelegate(
     private val store: EnvironmentVariableStore,
     key: String?,
@@ -297,6 +327,14 @@ private class ULongDelegate(
 ) : OptionalKeyDelegate<ULong>(key) {
 
     override fun getValue(key: String): ULong = store.getULongOrDefault(key = key, defaultValue = defaultValue)
+}
+
+private class NullableStringDelegate(
+    private val store: EnvironmentVariableStore,
+    key: String?
+) : OptionalKeyDelegate<String?>(key) {
+
+    override fun getValue(key: String): String? = store.getStringOrNull(key = key)
 }
 
 private class NullableBooleanDelegate(

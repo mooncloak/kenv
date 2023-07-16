@@ -6,6 +6,46 @@ import com.mooncloak.kodetools.kenv.EnvironmentVariable
 import com.mooncloak.kodetools.kenv.exception.NoSuchEnvironmentVariableException
 
 /**
+ * Retrieves the [EnvironmentVariable.Value] corresponding to the provided [key] and then returns the
+ * [EnvironmentVariable.Value.value] [String].
+ *
+ * @param [key] The name of the environment variable whose value is being retrieved.
+ *
+ * @return The [String] value corresponding to the environment variable in this [EnvironmentVariableStore] identified
+ * by the provided [key].
+ */
+fun EnvironmentVariableStore.getString(
+    key: String
+): String = get(key = key).value
+
+/**
+ * Retrieves the [EnvironmentVariable.Value] corresponding to the provided [key] and returns the
+ * [EnvironmentVariable.Value.value] [String].
+ *
+ * @param [key] The name of the environment variable whose value is being retrieved.
+ *
+ * @return The [String] value corresponding to the environment variable in this [EnvironmentVariableStore] identified
+ * by the provided [key], or `null` if it isn't present.
+ */
+fun EnvironmentVariableStore.getStringOrNull(
+    key: String
+): String? = getOrNull(key = key)?.value
+
+/**
+ * Retrieves the [EnvironmentVariable.Value] corresponding to the provided [key] and returns the
+ * [EnvironmentVariable.Value.value] [String] or the provided [defaultValue] if the key does not exist.
+ *
+ * @param [key] The name of the environment variable whose value is being retrieved.
+ *
+ * @return The [String] value corresponding to the environment variable in this [EnvironmentVariableStore] identified
+ * by the provided [key], or the [defaultValue] if it isn't present.
+ */
+fun EnvironmentVariableStore.getStringOrDefault(
+    key: String,
+    defaultValue: String
+): String = getOrNull(key = key)?.value ?: defaultValue
+
+/**
  * Retrieves the [EnvironmentVariable.Value] corresponding to the provided [key] and then parses the
  * [EnvironmentVariable.Value.value] [String] as an [Boolean] and returns the result.
  *
