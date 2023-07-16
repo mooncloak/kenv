@@ -135,7 +135,9 @@ public final class com/mooncloak/kodetools/kenv/store/EnvironmentVariableStore$D
 }
 
 public final class com/mooncloak/kodetools/kenv/store/EnvironmentVariableStoreDelegatesKt {
+	public static final fun boolean (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;Ljava/lang/String;)Lkotlin/properties/ReadOnlyProperty;
 	public static final fun boolean (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;Z)Lkotlin/properties/ReadOnlyProperty;
+	public static synthetic fun boolean$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lkotlin/properties/ReadOnlyProperty;
 	public static synthetic fun boolean$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;ZILjava/lang/Object;)Lkotlin/properties/ReadOnlyProperty;
 	public static final fun booleanOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;)Lkotlin/properties/ReadOnlyProperty;
 	public static synthetic fun booleanOrNull$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;ILjava/lang/Object;)Lkotlin/properties/ReadOnlyProperty;
@@ -163,6 +165,8 @@ public final class com/mooncloak/kodetools/kenv/store/EnvironmentVariableStoreDe
 	public static synthetic fun short$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;SILjava/lang/Object;)Lkotlin/properties/ReadOnlyProperty;
 	public static final fun shortOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;)Lkotlin/properties/ReadOnlyProperty;
 	public static synthetic fun shortOrNull$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;ILjava/lang/Object;)Lkotlin/properties/ReadOnlyProperty;
+	public static final fun stringOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;)Lkotlin/properties/ReadOnlyProperty;
+	public static synthetic fun stringOrNull$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;ILjava/lang/Object;)Lkotlin/properties/ReadOnlyProperty;
 	public static final fun ubyte-sEu17AQ (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;B)Lkotlin/properties/ReadOnlyProperty;
 	public static synthetic fun ubyte-sEu17AQ$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;BILjava/lang/Object;)Lkotlin/properties/ReadOnlyProperty;
 	public static final fun ubyteOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;)Lkotlin/properties/ReadOnlyProperty;
@@ -225,6 +229,9 @@ public final class com/mooncloak/kodetools/kenv/store/EnvironmentVariableStoreVa
 	public static synthetic fun getShortOrDefault$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;SIILjava/lang/Object;)S
 	public static final fun getShortOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;I)Ljava/lang/Short;
 	public static synthetic fun getShortOrNull$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;IILjava/lang/Object;)Ljava/lang/Short;
+	public static final fun getString (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;)Ljava/lang/String;
+	public static final fun getStringOrDefault (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+	public static final fun getStringOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;)Ljava/lang/String;
 	public static final fun getUByte (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;I)B
 	public static synthetic fun getUByte$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;IILjava/lang/Object;)B
 	public static final fun getUByteOrDefault-SpDDLgk (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;BI)B
