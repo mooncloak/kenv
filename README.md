@@ -211,6 +211,15 @@ val isDebug by kenv.boolean("is_debug")
 val appName by kenv.string("app_name", defaultValue = "MyApp")
 ```
 
+### System
+
+The `System` component can also be used directly to obtain environment variables from the underlying platform's system
+component.
+
+```kotlin
+System.getEnv("access_token")
+```
+
 ## Inspiration 🧠
 
 This project was inspired by, yet completely independent of, the following open source projects:
