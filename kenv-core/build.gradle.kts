@@ -1,6 +1,7 @@
 import com.mooncloak.kodetools.kenv.buildSrc.LibraryConstants
 import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnLinux
 import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnOSX
+import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnWindows
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -25,12 +26,18 @@ kotlin {
     if (isBuildingOnOSX()) {
         ios()
         iosSimulatorArm64()
+        tvos()
+        watchos()
         macosX64("native")
         macosArm64("native")
     }
 
     if (isBuildingOnLinux()) {
         linuxX64("native")
+    }
+
+    if (isBuildingOnWindows()) {
+        mingwX64("native")
     }
 
     sourceSets {
