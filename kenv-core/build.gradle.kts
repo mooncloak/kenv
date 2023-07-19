@@ -15,6 +15,9 @@ group = LibraryConstants.group
 version = LibraryConstants.versionName
 
 kotlin {
+    // Enable the default target hierarchy:
+    targetHierarchy.default()
+
     jvm()
 
     js(IR) {
@@ -28,16 +31,16 @@ kotlin {
         iosSimulatorArm64()
         tvos()
         watchos()
-        macosX64("native")
-        macosArm64("native")
+        macosX64()
+        macosArm64()
     }
 
     if (isBuildingOnLinux()) {
-        linuxX64("native")
+        linuxX64()
     }
 
     if (isBuildingOnWindows()) {
-        mingwX64("native")
+        mingwX64()
     }
 
     sourceSets {
@@ -59,13 +62,7 @@ kotlin {
             }
         }
 
-        val nativeMain by getting
-
-        if (isBuildingOnOSX()) {
-            val iosMain by sourceSets.getting
-            val iosSimulatorArm64Main by sourceSets.getting
-            iosSimulatorArm64Main.dependsOn(iosMain)
-        }
+        val nativeMain by sourceSets.getting
     }
 }
 
