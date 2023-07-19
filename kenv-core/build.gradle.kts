@@ -9,6 +9,7 @@ plugins {
     id("com.android.library")
     id("maven-publish")
     id("org.jetbrains.dokka")
+    id("com.mikepenz.aboutlibraries.plugin")
 }
 
 group = LibraryConstants.group
@@ -105,3 +106,19 @@ android {
 }
 
 tasks.withType<Jar> { duplicatesStrategy = DuplicatesStrategy.INHERIT }
+
+aboutLibraries {
+    // - If the automatic registered android tasks are disabled, a similar thing can be achieved manually
+    // - `./gradlew app:exportLibraryDefinitions -PaboutLibraries.exportPath=src/main/res/raw`
+    // - the resulting file can for example be added as part of the SCM
+    registerAndroidTasks = false
+
+    // Define the output file name. Modifying this will disable the automatic meta data discovery for supported platforms.
+    outputFileName = "dependencies.json"
+
+    // Enable pretty printing for the generated JSON file
+    prettyPrint = true
+
+    // Allows to only collect dependencies of specific variants during the `collectDependencies` step.
+    filterVariants += "release"
+}
