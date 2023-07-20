@@ -237,7 +237,7 @@ found [here](docs/index.md).
 
 ## Security 🛡️
 
-For security vulnerabilities, concerns, or issues, please refer to the [security policy](SECURITY.md]) for more
+For security vulnerabilities, concerns, or issues, please refer to the [security policy](SECURITY.md) for more
 information on appropriate approaches for disclosure.
 
 ## Contributing ✍️
