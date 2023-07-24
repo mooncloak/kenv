@@ -615,7 +615,11 @@ class DotEnvParserTest {
         // Single Line
         assertEquals(
             expected = "abc",
-            actual = parser.parseValue(start = 0, line = "\"abc\"", reader = LineReaderSource("abc"))
+            actual = parser.parseValue(start = 0, line = "\"abc\"", reader = LineReaderSource("\"abc\""))
+        )
+        assertEquals(
+            expected = "abc",
+            actual = parser.parseValue(start = 0, line = "'abc'", reader = LineReaderSource("'abc'"))
         )
         assertEquals(
             expected = "abc",
