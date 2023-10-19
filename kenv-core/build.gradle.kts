@@ -68,6 +68,7 @@ kotlin {
 }
 
 android {
+    namespace = "com.mooncloak.kodetools.kenv"
     compileSdk = LibraryConstants.Android.compileSdkVersion
 
     defaultConfig {

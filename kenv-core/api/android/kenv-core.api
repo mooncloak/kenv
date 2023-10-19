@@ -3,13 +3,6 @@ public final class com/mooncloak/kodetools/kenv/AndroidKenvDslKt {
 	public static synthetic fun dotenv$default (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Ljava/io/File;ZLokio/FileSystem;Lcom/mooncloak/kodetools/kenv/parse/DotEnvParser$Options;ILjava/lang/Object;)V
 }
 
-public final class com/mooncloak/kodetools/kenv/BuildConfig {
-	public static final field BUILD_TYPE Ljava/lang/String;
-	public static final field DEBUG Z
-	public static final field LIBRARY_PACKAGE_NAME Ljava/lang/String;
-	public fun <init> ()V
-}
-
 public final class com/mooncloak/kodetools/kenv/EnvironmentVariable {
 	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
