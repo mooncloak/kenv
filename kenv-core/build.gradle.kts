@@ -123,3 +123,21 @@ aboutLibraries {
     // Allows to only collect dependencies of specific variants during the `collectDependencies` step.
     filterVariants += "release"
 }
+
+afterEvaluate {
+    publishing {
+        repositories {
+            maven {
+                url = uri("https://repo.repsy.io/mvn/mooncloak/kodetools")
+
+                val usernameKey = "repsyKodetoolsUsername"
+                val passwordKey = "repsyKodetoolsToken"
+
+                credentials {
+                    username = (project.findProperty(usernameKey) ?: System.getenv(usernameKey)) as? String
+                    password = (project.findProperty(passwordKey) ?: System.getenv(passwordKey)) as? String
+                }
+            }
+        }
+    }
+}

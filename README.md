@@ -17,22 +17,24 @@ val value = kenv["MY_ENVIRONMENT_VARIABLE"]
 
 ## Getting Started 🏁
 
-The library is provided through Maven Central. Checkout
+The library is provided through [Repsy.io](https://repsy.io/). Checkout
 the [releases page](https://github.com/mooncloak/kenv/releases) to get the latest version.
 <br/><br/>
 <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/mooncloak/kenv">
 
 ### Repository
 
-```groovy
+```kotlin
 repositories {
-    mavenCentral()
+  maven {
+    url = uri("https://repo.repsy.io/mvn/mooncloak/kodetools")
+  }
 }
 ```
 
 ### Dependencies
 
-```groovy
+```kotlin
 implementation("com.mooncloak.kenv:kenv-core:VERSION")
 ```
 
