@@ -17,7 +17,7 @@ version = LibraryConstants.versionName
 
 kotlin {
     // Enable the default target hierarchy:
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
     jvm()
 
