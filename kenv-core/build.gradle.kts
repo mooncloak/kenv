@@ -128,10 +128,10 @@ afterEvaluate {
     publishing {
         repositories {
             maven {
-                url = uri("https://repo.repsy.io/mvn/mooncloak/kodetools")
+                url = uri("https://maven.pkg.jetbrains.space/mooncloak/p/main/kodetools")
 
-                val usernameKey = "repsyKodetoolsUsername"
-                val passwordKey = "repsyKodetoolsToken"
+                val usernameKey = "spaceUsername"
+                val passwordKey = "spacePassword"
 
                 credentials {
                     username = (project.findProperty(usernameKey) ?: System.getenv(usernameKey)) as? String
