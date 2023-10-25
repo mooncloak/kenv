@@ -38,21 +38,7 @@ jobs:
 
       - name: Mac deploy
         run: |
-          ./gradlew \
-          publishIosArm32PublicationToMavenRepository \
-          publishIosArm64PublicationToMavenRepository \
-          publishIosSimulatorArm64PublicationToMavenRepository \
-          publishIosX64PublicationToMavenRepository \
-          publishMacosX64PublicationToMavenRepository \
-          publishMacosArm64PublicationToMavenRepository \
-          publishWatchosArm32PublicationToMavenRepository \
-          publishWatchosArm64PublicationToMavenRepository \
-          publishWatchosDeviceArm64PublicationToMavenRepository \
-          publishWatchosX86PublicationToMavenRepository \
-          publishWatchosX64PublicationToMavenRepository \
-          publishTvosArm64PublicationToMavenRepository \
-          publishTvosX64PublicationToMavenRepository \
-          --no-daemon --stacktrace
+          ./gradlew publish --no-daemon --stacktrace
 
   deploy-windows:
     runs-on: windows-latest
@@ -68,4 +54,4 @@ jobs:
 
       - name: Windows deploy
         run: |
-          ./gradlew publishMingwX64PublicationToMavenRepository publishMingwX86PublicationToMavenRepository --no-daemon --stacktrace
+          ./gradlew publish --no-daemon --stacktrace
