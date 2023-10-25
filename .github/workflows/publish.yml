@@ -4,10 +4,8 @@ on:
   workflow_dispatch:
 
 env:
-  sonatypeUsername: ${{ secrets.SONATYPE_USERNAME }}
-  sonatypePassword: ${{ secrets.SONATYPE_PASSWORD }}
-  signingKey: ${{ secrets.SIGNING_KEY }}
-  signingPassword: ${{ secrets.SIGNING_PASSWORD }}
+  spaceUsername: ${{ secrets.SPACEUSERNAME }}
+  spacePassword: ${{ secrets.SPACEPASSWORD }}
 
 jobs:
   deploy-linux:
