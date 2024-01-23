@@ -150,23 +150,23 @@ class KenvBuilder internal constructor() {
     }
 
     /**
-     * Creates an [EnvironmentVariableStore] from the provided ".env" file [pathString] and [fileSystem] and adds it to
+     * Creates an [EnvironmentVariableStore] from the provided ".env" file [path] and [fileSystem] and adds it to
      * the [Kenv] instance being created in the order this function is invoked.
      *
-     * @param [pathString] The [String] path to the ".env" file.
-     * @param [normalize] Whether the [pathString] should be normalized. See [Path.Companion.toPath].
+     * @param [path] The [String] path to the ".env" file.
+     * @param [normalize] Whether the [path] should be normalized. See [Path.Companion.toPath].
      * @param [fileSystem] The [FileSystem] where the ".env" file resides.
      * @param [options] The [DotEnvParser.Options] used during the parsing of the ".env" file.
      */
     fun dotenv(
-        pathString: String,
+        path: String,
         normalize: Boolean = false,
         fileSystem: FileSystem = FileSystem.platformDefault,
         options: DotEnvParser.Options = DotEnvParser.Options()
     ) {
         stores.add(
             DotEnvEnvironmentVariableStore(
-                source = fileSystem.source(file = pathString.toPath(normalize = normalize)),
+                source = fileSystem.source(file = path.toPath(normalize = normalize)),
                 options = options
             )
         )
