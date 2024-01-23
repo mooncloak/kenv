@@ -3,7 +3,6 @@
 package com.mooncloak.kodetools.kenv.store
 
 import com.mooncloak.kodetools.kenv.EnvironmentVariable
-import com.mooncloak.kodetools.kenv.Kenv
 import com.mooncloak.kodetools.kenv.System
 import com.mooncloak.kodetools.kenv.exception.NoSuchEnvironmentVariableException
 
@@ -146,4 +145,3 @@ fun EnvironmentVariableStore.getVariableOrDefault(
     defaultValue: EnvironmentVariable.Value
 ): EnvironmentVariable =
     getVariableOrNull(key = key) ?: EnvironmentVariable(key = key, value = defaultValue)
-

@@ -27,6 +27,7 @@ internal class LineReaderSource(source: Source) : Source {
     fun readLine(): String? =
         bufferedSource.readUtf8Line()
 
+    @Suppress("unused")
     fun readLines(): List<String> {
         val lines = mutableListOf<String>()
         var line = readLine()

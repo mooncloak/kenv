@@ -15,13 +15,9 @@ import com.mooncloak.kodetools.kenv.store.CascadingEnvironmentVariableStore
  */
 class Kenv internal constructor(stores: Collection<EnvironmentVariableStore>) : EnvironmentVariableStore {
 
-    private val delegate: EnvironmentVariableStore
-
-    init {
-        this.delegate = CascadingEnvironmentVariableStore(
-            stores = stores
-        )
-    }
+    private val delegate: EnvironmentVariableStore = CascadingEnvironmentVariableStore(
+        stores = stores
+    )
 
     override fun get(key: String): EnvironmentVariable.Value = delegate.get(key = key)
 
