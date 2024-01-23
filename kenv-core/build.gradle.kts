@@ -30,10 +30,13 @@ kotlin {
     }
 
     if (isBuildingOnOSX()) {
-        ios()
+        iosX64()
+        iosArm64()
         iosSimulatorArm64()
-        tvos()
-        watchos()
+        tvosX64()
+        tvosArm64()
+        watchosX64()
+        watchosArm64()
         macosX64()
         macosArm64()
     }
