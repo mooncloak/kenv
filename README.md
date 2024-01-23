@@ -30,7 +30,7 @@ Checkout the [releases page](https://github.com/mooncloak/kenv/releases) to get 
 ```kotlin
 repositories {
   maven {
-    url = uri("https://maven.pkg.jetbrains.space/mooncloak/p/main/kodetools")
+    url = uri("https://repo.repsy.io/mvn/mooncloak/public")
   }
 }
 ```
