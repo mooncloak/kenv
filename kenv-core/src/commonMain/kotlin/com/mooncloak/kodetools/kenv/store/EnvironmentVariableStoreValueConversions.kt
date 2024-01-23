@@ -103,6 +103,7 @@ fun EnvironmentVariableStore.getBooleanOrDefault(
  *
  * @see [String.toByte]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class, IllegalArgumentException::class)
 fun EnvironmentVariableStore.getByte(
     key: String,
     radix: Int = 10
@@ -121,6 +122,7 @@ fun EnvironmentVariableStore.getByte(
  *
  * @see [String.toByteOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getByteOrNull(
     key: String,
     radix: Int = 10
@@ -139,6 +141,7 @@ fun EnvironmentVariableStore.getByteOrNull(
  *
  * @see [String.toByteOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getByteOrDefault(
     key: String,
     defaultValue: Byte,
@@ -161,6 +164,7 @@ fun EnvironmentVariableStore.getByteOrDefault(
  *
  * @see [String.toShort]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class, IllegalArgumentException::class)
 fun EnvironmentVariableStore.getShort(
     key: String,
     radix: Int = 10
@@ -179,6 +183,7 @@ fun EnvironmentVariableStore.getShort(
  *
  * @see [String.toShortOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getShortOrNull(
     key: String,
     radix: Int = 10
@@ -197,6 +202,7 @@ fun EnvironmentVariableStore.getShortOrNull(
  *
  * @see [String.toShortOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getShortOrDefault(
     key: String,
     defaultValue: Short,
@@ -219,6 +225,7 @@ fun EnvironmentVariableStore.getShortOrDefault(
  *
  * @see [String.toInt]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class, IllegalArgumentException::class)
 fun EnvironmentVariableStore.getInt(
     key: String,
     radix: Int = 10
@@ -237,6 +244,7 @@ fun EnvironmentVariableStore.getInt(
  *
  * @see [String.toIntOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getIntOrNull(
     key: String,
     radix: Int = 10
@@ -255,6 +263,7 @@ fun EnvironmentVariableStore.getIntOrNull(
  *
  * @see [String.toIntOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getIntOrDefault(
     key: String,
     defaultValue: Int,
@@ -277,6 +286,7 @@ fun EnvironmentVariableStore.getIntOrDefault(
  *
  * @see [String.toLong]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class, IllegalArgumentException::class)
 fun EnvironmentVariableStore.getLong(
     key: String,
     radix: Int = 10
@@ -295,6 +305,7 @@ fun EnvironmentVariableStore.getLong(
  *
  * @see [String.toLongOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getLongOrNull(
     key: String,
     radix: Int = 10
@@ -313,6 +324,7 @@ fun EnvironmentVariableStore.getLongOrNull(
  *
  * @see [String.toLongOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getLongOrDefault(
     key: String,
     defaultValue: Long,
@@ -334,6 +346,7 @@ fun EnvironmentVariableStore.getLongOrDefault(
  *
  * @see [String.toFloat]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class)
 fun EnvironmentVariableStore.getFloat(
     key: String
 ): Float = get(key = key).value.toFloat()
@@ -380,6 +393,7 @@ fun EnvironmentVariableStore.getFloatOrDefault(
  *
  * @see [String.toInt]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class)
 fun EnvironmentVariableStore.getDouble(
     key: String
 ): Double = get(key = key).value.toDouble()
@@ -427,6 +441,7 @@ fun EnvironmentVariableStore.getDoubleOrDefault(
  *
  * @see [String.toUByte]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class, IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUByte(
     key: String,
     radix: Int = 10
@@ -445,6 +460,7 @@ fun EnvironmentVariableStore.getUByte(
  *
  * @see [String.toUByteOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUByteOrNull(
     key: String,
     radix: Int = 10
@@ -463,6 +479,7 @@ fun EnvironmentVariableStore.getUByteOrNull(
  *
  * @see [String.toUByteOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUByteOrDefault(
     key: String,
     defaultValue: UByte,
@@ -485,6 +502,7 @@ fun EnvironmentVariableStore.getUByteOrDefault(
  *
  * @see [String.toUShort]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class, IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUShort(
     key: String,
     radix: Int = 10
@@ -503,6 +521,7 @@ fun EnvironmentVariableStore.getUShort(
  *
  * @see [String.toUShortOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUShortOrNull(
     key: String,
     radix: Int = 10
@@ -521,6 +540,7 @@ fun EnvironmentVariableStore.getUShortOrNull(
  *
  * @see [String.toUShortOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUShortOrDefault(
     key: String,
     defaultValue: UShort,
@@ -543,6 +563,7 @@ fun EnvironmentVariableStore.getUShortOrDefault(
  *
  * @see [String.toUInt]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class, IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUInt(
     key: String,
     radix: Int = 10
@@ -561,6 +582,7 @@ fun EnvironmentVariableStore.getUInt(
  *
  * @see [String.toUIntOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUIntOrNull(
     key: String,
     radix: Int = 10
@@ -579,6 +601,7 @@ fun EnvironmentVariableStore.getUIntOrNull(
  *
  * @see [String.toUIntOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getUIntOrDefault(
     key: String,
     defaultValue: UInt,
@@ -601,6 +624,7 @@ fun EnvironmentVariableStore.getUIntOrDefault(
  *
  * @see [String.toULong]
  */
+@Throws(NoSuchEnvironmentVariableException::class, NumberFormatException::class, IllegalArgumentException::class)
 fun EnvironmentVariableStore.getULong(
     key: String,
     radix: Int = 10
@@ -619,6 +643,7 @@ fun EnvironmentVariableStore.getULong(
  *
  * @see [String.toULongOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getULongOrNull(
     key: String,
     radix: Int = 10
@@ -637,6 +662,7 @@ fun EnvironmentVariableStore.getULongOrNull(
  *
  * @see [String.toULongOrNull]
  */
+@Throws(IllegalArgumentException::class)
 fun EnvironmentVariableStore.getULongOrDefault(
     key: String,
     defaultValue: ULong,

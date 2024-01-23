@@ -35,6 +35,7 @@ interface EnvironmentVariableStore {
      * @return The [EnvironmentVariable.Value] corresponding to the environment variable in this
      * [EnvironmentVariableStore] instance with the provided [key].
      */
+    @Throws(NoSuchEnvironmentVariableException::class)
     operator fun get(key: String): EnvironmentVariable.Value
 
     /**
@@ -49,6 +50,7 @@ interface EnvironmentVariableStore {
      * @return The [EnvironmentVariable] corresponding to the environment variable in this [EnvironmentVariableStore]
      * instance with the provided [key].
      */
+    @Throws(NoSuchEnvironmentVariableException::class)
     fun getVariable(key: String): EnvironmentVariable {
         val value = get(key = key)
 
