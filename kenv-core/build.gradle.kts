@@ -2,6 +2,7 @@ import com.mooncloak.kodetools.kenv.buildSrc.LibraryConstants
 import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnLinux
 import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnOSX
 import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnWindows
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -23,6 +24,15 @@ kotlin {
 
     js(IR) {
         nodejs()
+    }
+
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        nodejs {
+            testTask {
+                enabled = false
+            }
+        }
     }
 
     androidTarget {
@@ -67,6 +77,8 @@ kotlin {
                 implementation("com.squareup.okio:okio-nodefilesystem:_")
             }
         }
+
+        val wasmJsMain by getting
 
         val nativeMain by sourceSets.getting
     }
