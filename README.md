@@ -15,7 +15,7 @@ val value = kenv["MY_ENVIRONMENT_VARIABLE"]
 
 <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/mooncloak/kenv">
 
-> [!Warning] <br/>
+> [!Warning] 
 > Exclude any environment variables from your source control repositories to avoid leaking sensitive data. For `git` 
 > you can add the `.env` file paths to your `.gitignore` file.
 
