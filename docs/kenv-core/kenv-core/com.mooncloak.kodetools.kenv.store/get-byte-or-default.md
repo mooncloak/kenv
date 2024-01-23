@@ -3,7 +3,7 @@
 # getByteOrDefault
 
 [common]\
-fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getByteOrDefault](get-byte-or-default.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), defaultValue: [Byte](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html), radix: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 10): [Byte](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getByteOrDefault](get-byte-or-default.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), defaultValue: [Byte](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html), radix: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 10): [Byte](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)
 
 Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-byte-or-default.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) as an [Byte](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html) number and returns the result or the provided [defaultValue](get-byte-or-default.md) if the [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) value is not a valid representation of a number.
 

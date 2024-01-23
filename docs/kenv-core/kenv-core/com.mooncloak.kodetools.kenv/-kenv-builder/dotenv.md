@@ -32,9 +32,9 @@ common
 | options | The [DotEnvParser.Options](../../com.mooncloak.kodetools.kenv.parse/-dot-env-parser/-options/index.md) used during the parsing of the &quot;.env&quot; file. |
 
 [common]\
-fun [dotenv](dotenv.md)(pathString: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), normalize: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = false, fileSystem: FileSystem = FileSystem.platformDefault, options: [DotEnvParser.Options](../../com.mooncloak.kodetools.kenv.parse/-dot-env-parser/-options/index.md) = DotEnvParser.Options())
+fun [dotenv](dotenv.md)(path: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), normalize: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = false, fileSystem: FileSystem = FileSystem.platformDefault, options: [DotEnvParser.Options](../../com.mooncloak.kodetools.kenv.parse/-dot-env-parser/-options/index.md) = DotEnvParser.Options())
 
-Creates an [EnvironmentVariableStore](../../com.mooncloak.kodetools.kenv.store/-environment-variable-store/index.md) from the provided &quot;.env&quot; file [pathString](dotenv.md) and [fileSystem](dotenv.md) and adds it to the [Kenv](../-kenv/index.md) instance being created in the order this function is invoked.
+Creates an [EnvironmentVariableStore](../../com.mooncloak.kodetools.kenv.store/-environment-variable-store/index.md) from the provided &quot;.env&quot; file [path](dotenv.md) and [fileSystem](dotenv.md) and adds it to the [Kenv](../-kenv/index.md) instance being created in the order this function is invoked.
 
 #### Parameters
 
@@ -42,7 +42,7 @@ common
 
 | | |
 |---|---|
-| pathString | The [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) path to the &quot;.env&quot; file. |
-| normalize | Whether the [pathString](dotenv.md) should be normalized. See Path.Companion.toPath. |
+| path | The [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) path to the &quot;.env&quot; file. |
+| normalize | Whether the [path](dotenv.md) should be normalized. See Path.Companion.toPath. |
 | fileSystem | The FileSystem where the &quot;.env&quot; file resides. |
 | options | The [DotEnvParser.Options](../../com.mooncloak.kodetools.kenv.parse/-dot-env-parser/-options/index.md) used during the parsing of the &quot;.env&quot; file. |

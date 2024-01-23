@@ -3,7 +3,7 @@
 # getULongOrDefault
 
 [common]\
-fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getULongOrDefault](get-u-long-or-default.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), defaultValue: [ULong](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html), radix: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 10): [ULong](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html)
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getULongOrDefault](get-u-long-or-default.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), defaultValue: [ULong](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html), radix: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 10): [ULong](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html)
 
 Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-u-long-or-default.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) as an [ULong](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html) number and returns the result or the provided [defaultValue](get-u-long-or-default.md) if the [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) value is not a valid representation of a number.
 

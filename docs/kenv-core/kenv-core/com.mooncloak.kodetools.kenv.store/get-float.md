@@ -3,7 +3,7 @@
 # getFloat
 
 [common]\
-fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getFloat](get-float.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getFloat](get-float.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)
 
 Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-float.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) as an [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) number and returns the result.
 

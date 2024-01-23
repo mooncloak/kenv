@@ -3,7 +3,7 @@
 # getDouble
 
 [common]\
-fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getDouble](get-double.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getDouble](get-double.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
 
 Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-double.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) as an [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) number and returns the result.
 

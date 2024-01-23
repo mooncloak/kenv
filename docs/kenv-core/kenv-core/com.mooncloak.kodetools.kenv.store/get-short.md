@@ -3,7 +3,7 @@
 # getShort
 
 [common]\
-fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getShort](get-short.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), radix: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 10): [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getShort](get-short.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), radix: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 10): [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)
 
 Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-short.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) as an [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html) number and returns the result.
 

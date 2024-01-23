@@ -3,7 +3,7 @@
 # getStringOrNull
 
 [common]\
-fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getStringOrNull](get-string-or-null.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getStringOrNull](get-string-or-null.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?
 
 Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-string-or-null.md) and returns the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html).
 

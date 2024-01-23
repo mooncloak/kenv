@@ -3,7 +3,7 @@
 # getShortOrDefault
 
 [common]\
-fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getShortOrDefault](get-short-or-default.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), defaultValue: [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html), radix: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 10): [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getShortOrDefault](get-short-or-default.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), defaultValue: [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html), radix: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) = 10): [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)
 
 Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-short-or-default.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) as an [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html) number and returns the result or the provided [defaultValue](get-short-or-default.md) if the [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) value is not a valid representation of a number.
 
