@@ -15,6 +15,10 @@ val value = kenv["MY_ENVIRONMENT_VARIABLE"]
 
 <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/mooncloak/kenv">
 
+> [!Warning] <br/>
+> Exclude any environment variables from your source control repositories to avoid leaking sensitive data. For `git` 
+> you can add the `.env` file paths to your `.gitignore` file.
+
 ## Getting Started 🏁
 
 Checkout the [releases page](https://github.com/mooncloak/kenv/releases) to get the latest version.
