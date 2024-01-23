@@ -28,6 +28,11 @@ kotlin {
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
+        browser {
+            testTask {
+                enabled = false
+            }
+        }
         nodejs {
             testTask {
                 enabled = false
