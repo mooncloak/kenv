@@ -35,6 +35,9 @@ kotlin {
         }
     }
 
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmWasi()
+
     androidTarget {
         publishAllLibraryVariants()
     }
@@ -80,7 +83,13 @@ kotlin {
 
         val wasmJsMain by getting
 
-        val nativeMain by sourceSets.getting
+        val wasmWasiMain by getting {
+            dependencies {
+                implementation("com.squareup.okio:okio-wasifilesystem:_")
+            }
+        }
+
+        val nativeMain by getting
     }
 }
 
