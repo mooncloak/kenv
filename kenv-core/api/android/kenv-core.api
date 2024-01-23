@@ -189,6 +189,7 @@ public final class com/mooncloak/kodetools/kenv/store/EnvironmentVariableStoreKt
 }
 
 public final class com/mooncloak/kodetools/kenv/store/EnvironmentVariableStoreValueConversionsKt {
+	public static final fun get (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
 	public static final fun getBoolean (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;)Z
 	public static final fun getBooleanOrDefault (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;Z)Z
 	public static final fun getBooleanOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;)Ljava/lang/Boolean;
@@ -216,6 +217,8 @@ public final class com/mooncloak/kodetools/kenv/store/EnvironmentVariableStoreVa
 	public static synthetic fun getLongOrDefault$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;JIILjava/lang/Object;)J
 	public static final fun getLongOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;I)Ljava/lang/Long;
 	public static synthetic fun getLongOrNull$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;IILjava/lang/Object;)Ljava/lang/Long;
+	public static final fun getOrDefault (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+	public static final fun getOrNull (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
 	public static final fun getShort (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;I)S
 	public static synthetic fun getShort$default (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;IILjava/lang/Object;)S
 	public static final fun getShortOrDefault (Lcom/mooncloak/kodetools/kenv/store/EnvironmentVariableStore;Ljava/lang/String;SI)S

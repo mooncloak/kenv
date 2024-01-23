@@ -1,4 +1,4 @@
-@file:Suppress("unused")
+@file:Suppress("unused", "KotlinRedundantDiagnosticSuppress", "NOTHING_TO_INLINE")
 
 package com.mooncloak.kodetools.kenv.store
 
@@ -67,7 +67,7 @@ interface EnvironmentVariableStore {
  * @return The [EnvironmentVariable.Value] corresponding to the environment variable in this
  * [EnvironmentVariableStore] instance with the provided [key], or `null` if there is no value for the provided [key].
  */
-fun EnvironmentVariableStore.getOrNull(key: String): EnvironmentVariable.Value? =
+inline fun EnvironmentVariableStore.getOrNull(key: String): EnvironmentVariable.Value? =
     try {
         get(key = key)
     } catch (_: NoSuchEnvironmentVariableException) {
@@ -84,7 +84,7 @@ fun EnvironmentVariableStore.getOrNull(key: String): EnvironmentVariable.Value? 
  * [EnvironmentVariableStore] instance with the provided [key], or the provided [defaultValue] if there is no value for
  * the provided [key].
  */
-fun EnvironmentVariableStore.getOrDefault(
+inline fun EnvironmentVariableStore.getOrDefault(
     key: String,
     defaultValue: EnvironmentVariable.Value
 ): EnvironmentVariable.Value =
@@ -126,7 +126,7 @@ inline fun EnvironmentVariableStore.getEnvOrDefault(
  * @return The [EnvironmentVariable] corresponding to the environment variable in this [EnvironmentVariableStore]
  * instance with the provided [key], or `null` if there is no value for the provided [key].
  */
-fun EnvironmentVariableStore.getVariableOrNull(key: String): EnvironmentVariable? =
+inline fun EnvironmentVariableStore.getVariableOrNull(key: String): EnvironmentVariable? =
     try {
         getVariable(key = key)
     } catch (_: NoSuchEnvironmentVariableException) {
@@ -142,7 +142,7 @@ fun EnvironmentVariableStore.getVariableOrNull(key: String): EnvironmentVariable
  * @return The [EnvironmentVariable] corresponding to the environment variable in this [EnvironmentVariableStore]
  * instance with the provided [key], or the provided [defaultValue] if there is no value for the provided [key].
  */
-fun EnvironmentVariableStore.getVariableOrDefault(
+inline fun EnvironmentVariableStore.getVariableOrDefault(
     key: String,
     defaultValue: EnvironmentVariable.Value
 ): EnvironmentVariable =
