@@ -23,6 +23,11 @@ kotlin {
     jvm()
 
     js(IR) {
+        browser {
+            testTask {
+                enabled = false
+            }
+        }
         nodejs()
     }
 
