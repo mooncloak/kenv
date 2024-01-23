@@ -1,4 +1,4 @@
-@file:Suppress("unused")
+@file:Suppress("unused", "KotlinRedundantDiagnosticSuppress", "NOTHING_TO_INLINE")
 
 package com.mooncloak.kodetools.kenv
 
