@@ -25,7 +25,9 @@ kotlin {
         nodejs()
     }
 
-    androidTarget()
+    androidTarget {
+        publishAllLibraryVariants()
+    }
 
     if (isBuildingOnOSX()) {
         ios()
