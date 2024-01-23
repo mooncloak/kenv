@@ -668,3 +668,64 @@ inline fun EnvironmentVariableStore.getULongOrDefault(
     defaultValue: ULong,
     radix: Int = 10
 ): ULong = getOrNull(key = key)?.value?.toULongOrNull(radix) ?: defaultValue
+
+/**
+ * Retrieves a value resulting from invoking the provided [mapper] function with the [EnvironmentVariable.Value]
+ * obtained using [get] for the provided [key].
+ *
+ * @param [key] The name of the environment variable whose value is being retrieved.
+ *
+ * @throws [NoSuchEnvironmentVariableException] if there is no environment variable in this [EnvironmentVariableStore]
+ * with the provided [key].
+ *
+ * @return The result of invoking the provided [mapper] function with the [EnvironmentVariable.Value] obtained for the
+ * provided [key].
+ */
+@Throws(NoSuchEnvironmentVariableException::class)
+inline fun <R> EnvironmentVariableStore.get(
+    key: String,
+    mapper: (EnvironmentVariable.Value) -> R
+): R {
+    val value = get(key = key)
+
+    return mapper.invoke(value)
+}
+
+/**
+ * Retrieves a value resulting from invoking the provided [mapper] function with the [EnvironmentVariable.Value]
+ * obtained using [get] for the provided [key], or `null` if there was no matching [EnvironmentVariable] for the
+ * provided [key].
+ *
+ * @param [key] The name of the environment variable whose value is being retrieved.
+ *
+ * @return The result of invoking the provided [mapper] function with the [EnvironmentVariable.Value] obtained for the
+ * provided [key], or `null` if there was no matching [EnvironmentVariable] for the provided [key].
+ */
+inline fun <R> EnvironmentVariableStore.getOrNull(
+    key: String,
+    mapper: (EnvironmentVariable.Value) -> R
+): R? {
+    val value = getOrNull(key = key) ?: return null
+
+    return mapper.invoke(value)
+}
+
+/**
+ * Retrieves a value resulting from invoking the provided [mapper] function with the [EnvironmentVariable.Value]
+ * obtained using [get] for the provided [key], or the [defaultValue] if there was no [EnvironmentVariable] for the
+ * provided [key].
+ *
+ * @param [key] The name of the environment variable whose value is being retrieved.
+ *
+ * @return The result of invoking the provided [mapper] function with the [EnvironmentVariable.Value] obtained for the
+ * provided [key], or the [defaultValue] if there was no [EnvironmentVariable] for the provided [key].
+ */
+inline fun <R> EnvironmentVariableStore.getOrDefault(
+    key: String,
+    defaultValue: R,
+    mapper: (EnvironmentVariable.Value) -> R
+): R {
+    val value = getOrNull(key = key) ?: return defaultValue
+
+    return mapper.invoke(value)
+}
