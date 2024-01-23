@@ -4,9 +4,9 @@ group = LibraryConstants.group
 version = LibraryConstants.versionName
 
 plugins {
-    kotlin("jvm") version "1.9.20-RC" apply false
-    kotlin("multiplatform") version "1.9.20-RC" apply false
-    kotlin("android") version "1.9.0" apply false
+    kotlin("jvm") version "1.9.21" apply false
+    kotlin("multiplatform") version "1.9.21" apply false
+    kotlin("android") version "1.9.21" apply false
     id("com.android.library") version "8.1.0" apply false
     id("com.android.application") version "8.1.0" apply false
     id("org.jetbrains.dokka") version "1.8.10"
