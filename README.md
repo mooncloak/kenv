@@ -38,7 +38,7 @@ repositories {
 ### Dependencies
 
 ```kotlin
-implementation("com.mooncloak.kenv:kenv-core:VERSION")
+implementation("com.mooncloak.kodetools.kenv:kenv-core:VERSION")
 ```
 
 ## Supported DotEnv Format 📄
