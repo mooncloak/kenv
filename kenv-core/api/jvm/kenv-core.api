@@ -30,6 +30,13 @@ public final class com/mooncloak/kodetools/kenv/EnvironmentVariableKt {
 public final class com/mooncloak/kodetools/kenv/JvmKenvDslKt {
 	public static final fun dotenv (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Ljava/io/File;ZLokio/FileSystem;Lcom/mooncloak/kodetools/kenv/parse/DotEnvParser$Options;)V
 	public static synthetic fun dotenv$default (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Ljava/io/File;ZLokio/FileSystem;Lcom/mooncloak/kodetools/kenv/parse/DotEnvParser$Options;ILjava/lang/Object;)V
+	public static final fun properties (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Ljava/io/File;)V
+	public static final fun properties (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Ljava/io/InputStream;)V
+	public static final fun properties (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Ljava/util/Properties;)V
+	public static final fun properties (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Lokio/Path;)V
+	public static final fun xmlProperties (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Ljava/io/File;)V
+	public static final fun xmlProperties (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Ljava/io/InputStream;)V
+	public static final fun xmlProperties (Lcom/mooncloak/kodetools/kenv/KenvBuilder;Lokio/Path;)V
 }
 
 public final class com/mooncloak/kodetools/kenv/Kenv : com/mooncloak/kodetools/kenv/store/EnvironmentVariableStore {
