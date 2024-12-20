@@ -1,8 +1,4 @@
 import com.mooncloak.kodetools.kenv.buildSrc.LibraryConstants
-import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnLinux
-import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnOSX
-import com.mooncloak.kodetools.kenv.buildSrc.isBuildingOnWindows
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -31,7 +27,7 @@ kotlin {
         nodejs()
     }
 
-    @OptIn(ExperimentalWasmDsl::class)
+    @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
     wasmJs {
         browser {
             testTask {
@@ -45,32 +41,26 @@ kotlin {
         }
     }
 
-    @OptIn(ExperimentalWasmDsl::class)
+    @OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)
     wasmWasi()
 
     androidTarget {
         publishAllLibraryVariants()
     }
 
-    if (isBuildingOnOSX()) {
-        iosX64()
-        iosArm64()
-        iosSimulatorArm64()
-        tvosX64()
-        tvosArm64()
-        watchosX64()
-        watchosArm64()
-        macosX64()
-        macosArm64()
-    }
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
+    tvosX64()
+    tvosArm64()
+    watchosX64()
+    watchosArm64()
+    macosX64()
+    macosArm64()
 
-    if (isBuildingOnLinux()) {
-        linuxX64()
-    }
+    linuxX64()
 
-    if (isBuildingOnWindows()) {
-        mingwX64()
-    }
+    mingwX64()
 
     sourceSets {
         val commonMain by getting {
@@ -167,8 +157,10 @@ afterEvaluate {
                 url = uri("https://repo.repsy.io/mvn/mooncloak/public")
 
                 credentials {
-                    username = (project.findProperty("mooncloakRepsyUsername") ?: System.getenv("mooncloakRepsyUsername")) as? String
-                    password = (project.findProperty("mooncloakRepsyPassword") ?: System.getenv("mooncloakRepsyPassword")) as? String
+                    username = (project.findProperty("mooncloakRepsyUsername")
+                        ?: System.getenv("mooncloakRepsyUsername")) as? String
+                    password = (project.findProperty("mooncloakRepsyPassword")
+                        ?: System.getenv("mooncloakRepsyPassword")) as? String
                 }
             }
         }
