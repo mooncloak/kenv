@@ -3,4 +3,4 @@
 # key
 
 [common]\
-val [key](key.md): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+val [key](key.md): [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html)

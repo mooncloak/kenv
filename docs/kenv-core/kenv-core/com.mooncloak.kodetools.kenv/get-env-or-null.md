@@ -3,7 +3,7 @@
 # getEnvOrNull
 
 [common]\
-fun [System](-system/index.md).[getEnvOrNull](get-env-or-null.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [EnvironmentVariable.Value](-environment-variable/-value/index.md)?
+fun [System](-system/index.md).[getEnvOrNull](get-env-or-null.md)(key: [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html)): [EnvironmentVariable.Value](-environment-variable/-value/index.md)?
 
 Retrieves an environment variable value from the current [System](-system/index.md) for the provided [key](get-env-or-null.md), or `null` if no environment variable exists for that key.
 

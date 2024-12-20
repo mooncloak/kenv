@@ -3,7 +3,7 @@
 # get
 
 [common]\
-inline fun &lt;[R](get.md)&gt; [EnvironmentVariableStore](-environment-variable-store/index.md).[get](get.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), mapper: ([EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md)) -&gt; [R](get.md)): [R](get.md)
+inline fun &lt;[R](get.md)&gt; [EnvironmentVariableStore](-environment-variable-store/index.md).[get](get.md)(key: [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html), mapper: ([EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md)) -&gt; [R](get.md)): [R](get.md)
 
 Retrieves a value resulting from invoking the provided [mapper](get.md) function with the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) obtained using [get](get.md) for the provided [key](get.md).
 

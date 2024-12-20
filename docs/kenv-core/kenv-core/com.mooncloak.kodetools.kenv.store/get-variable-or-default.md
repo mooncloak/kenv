@@ -3,7 +3,7 @@
 # getVariableOrDefault
 
 [common]\
-inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getVariableOrDefault](get-variable-or-default.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html), defaultValue: [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md)): [EnvironmentVariable](../com.mooncloak.kodetools.kenv/-environment-variable/index.md)
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getVariableOrDefault](get-variable-or-default.md)(key: [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html), defaultValue: [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md)): [EnvironmentVariable](../com.mooncloak.kodetools.kenv/-environment-variable/index.md)
 
 Retrieves an environment variable from this [EnvironmentVariableStore](-environment-variable-store/index.md) instance for the provided [key](get-variable-or-default.md), or [defaultValue](get-variable-or-default.md) if no environment variable exists for that key.
 

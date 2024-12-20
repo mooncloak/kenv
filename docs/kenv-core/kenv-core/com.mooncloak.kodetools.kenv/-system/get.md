@@ -3,7 +3,7 @@
 # get
 
 [common]\
-open operator override fun [get](get.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [EnvironmentVariable.Value](../-environment-variable/-value/index.md)
+open operator override fun [get](get.md)(key: [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html)): [EnvironmentVariable.Value](../-environment-variable/-value/index.md)
 
 Retrieves an environment variable value from this [EnvironmentVariableStore](../../com.mooncloak.kodetools.kenv.store/-environment-variable-store/index.md) instance for the provided [key](get.md), or throws a [NoSuchEnvironmentVariableException](../../com.mooncloak.kodetools.kenv.exception/-no-such-environment-variable-exception/index.md) if no environment variable exists for that key.
 

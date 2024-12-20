@@ -6,4 +6,4 @@
 
 | Name | Summary |
 |---|---|
-| [DotEnvParser](-dot-env-parser/index.md) | [common]<br>class [DotEnvParser](-dot-env-parser/index.md)<br>A component that is responsible for parsing a Dot Env (&quot;.env&quot;) [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) file to obtain a collection of [EnvironmentVariable](../com.mooncloak.kodetools.kenv/-environment-variable/index.md)s. |
+| [DotEnvParser](-dot-env-parser/index.md) | [common]<br>class [DotEnvParser](-dot-env-parser/index.md)<br>A component that is responsible for parsing a Dot Env (&quot;.env&quot;) [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html) file to obtain a collection of [EnvironmentVariable](../com.mooncloak.kodetools.kenv/-environment-variable/index.md)s. |

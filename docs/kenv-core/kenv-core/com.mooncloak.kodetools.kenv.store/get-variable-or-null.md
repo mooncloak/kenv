@@ -3,7 +3,7 @@
 # getVariableOrNull
 
 [common]\
-inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getVariableOrNull](get-variable-or-null.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [EnvironmentVariable](../com.mooncloak.kodetools.kenv/-environment-variable/index.md)?
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getVariableOrNull](get-variable-or-null.md)(key: [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html)): [EnvironmentVariable](../com.mooncloak.kodetools.kenv/-environment-variable/index.md)?
 
 Retrieves an environment variable from this [EnvironmentVariableStore](-environment-variable-store/index.md) instance for the provided [key](get-variable-or-null.md), or `null` if no environment variable exists for that key.
 

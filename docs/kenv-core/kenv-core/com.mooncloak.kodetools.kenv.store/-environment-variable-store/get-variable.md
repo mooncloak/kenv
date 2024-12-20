@@ -3,7 +3,7 @@
 # getVariable
 
 [common]\
-open fun [getVariable](get-variable.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [EnvironmentVariable](../../com.mooncloak.kodetools.kenv/-environment-variable/index.md)
+open fun [getVariable](get-variable.md)(key: [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html)): [EnvironmentVariable](../../com.mooncloak.kodetools.kenv/-environment-variable/index.md)
 
 Retrieves an environment variable from this [EnvironmentVariableStore](index.md) instance for the provided [key](get-variable.md), or throws a [NoSuchEnvironmentVariableException](../../com.mooncloak.kodetools.kenv.exception/-no-such-environment-variable-exception/index.md) if no environment variable exists for that key.
 

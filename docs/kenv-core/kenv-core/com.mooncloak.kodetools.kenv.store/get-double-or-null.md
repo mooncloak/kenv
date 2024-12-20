@@ -3,9 +3,9 @@
 # getDoubleOrNull
 
 [common]\
-inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getDoubleOrNull](get-double-or-null.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)?
+inline fun [EnvironmentVariableStore](-environment-variable-store/index.md).[getDoubleOrNull](get-double-or-null.md)(key: [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html)): [Double](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html)?
 
-Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-double-or-null.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) as an [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) number and returns the result or `null` if the [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) value is not a valid representation of a number.
+Retrieves the [EnvironmentVariable.Value](../com.mooncloak.kodetools.kenv/-environment-variable/-value/index.md) corresponding to the provided [key](get-double-or-null.md) and then parses the [EnvironmentVariable.Value.value](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html) as an [Double](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html) number and returns the result or `null` if the [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html) value is not a valid representation of a number.
 
 #### Parameters
 
@@ -19,4 +19,4 @@ common
 
 | |
 |---|
-| [toDoubleOrNull](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/index.html) |
+| [toDoubleOrNull](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/index.html) |

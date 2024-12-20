@@ -3,4 +3,4 @@
 # Options
 
 [common]\
-constructor(includeEmptyValues: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = false)
+constructor(includeEmptyValues: [Boolean](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html) = false)

@@ -3,7 +3,7 @@
 # contains
 
 [common]\
-open operator fun [contains](contains.md)(key: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+open operator fun [contains](contains.md)(key: [String](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html)): [Boolean](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html)
 
 Determines whether an environment variable exists with the provided [key](contains.md) within this [EnvironmentVariableStore](index.md) instance.
 

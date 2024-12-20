@@ -91,7 +91,8 @@ $dokka.location:com.mooncloak.kodetools.kenv.store/EnvironmentVariableStore///Po
 $dokka.location:com.mooncloak.kodetools.kenv.store/EnvironmentVariableStore/contains/#kotlin.String/PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv.store/-environment-variable-store/contains.md
 $dokka.location:com.mooncloak.kodetools.kenv.store/EnvironmentVariableStore/get/#kotlin.String/PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv.store/-environment-variable-store/get.md
 $dokka.location:com.mooncloak.kodetools.kenv.store/EnvironmentVariableStore/getVariable/#kotlin.String/PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv.store/-environment-variable-store/get-variable.md
-$dokka.location:com.mooncloak.kodetools.kenv.util////PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv.util.md
+$dokka.location:com.mooncloak.kodetools.kenv.util////PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv.util/index.md
+$dokka.location:com.mooncloak.kodetools.kenv.util/IndexedString///PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv.util/-indexed-string/index.md
 $dokka.location:com.mooncloak.kodetools.kenv////PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv/index.md
 $dokka.location:com.mooncloak.kodetools.kenv//EnvironmentVariable/#kotlin.String#kotlin.String/PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv/-environment-variable.md
 $dokka.location:com.mooncloak.kodetools.kenv//Kenv/#kotlin.Function1[com.mooncloak.kodetools.kenv.KenvBuilder,kotlin.Unit]/PointingToDeclaration/kenv-core/kenv-core/com.mooncloak.kodetools.kenv/-kenv.md
